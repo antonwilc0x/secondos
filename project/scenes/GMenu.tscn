@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://styles/SecondOS.theme" type="Theme" id=1]
+[ext_resource path="res://source/MBar.gd" type="Script" id=2]
+
+[node name="GMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -565.0
+
+[node name="MBar" type="Panel" parent="."]
+anchor_right = 1.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Options" type="ReferenceRect" parent="MBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -8.0
+margin_right = 934.0
+margin_bottom = 8.0
+
+[node name="Stats" type="ReferenceRect" parent="MBar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -83.0
+margin_top = -7.5
+margin_bottom = 8.5
+
+[node name="Currency" type="Label" parent="MBar/Stats"]
+margin_left = 2.0
+margin_right = 15.0
+margin_bottom = 14.0
+text = "$"
+
+[node name="Money" type="Label" parent="MBar/Stats"]
+margin_left = 17.0
+margin_right = 80.0
+margin_bottom = 14.0
+text = "0"
